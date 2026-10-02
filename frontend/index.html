@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div>
+        <h1>Student Management System</h1>
+        <p class="subtitle">Its from FastAPI</p>
+        <div class="form-card">
+            <h2 id="formTitle">Add Student</h2>
+            <form action="" id="studentForm">
+                <input type="text" id="name" placeholder="Enter your name" required>
+                <input type="text" id="department" placeholder="Enter your department" required>
+                <input type="number" id="semester" placeholder="Enter your semester" min=1 max=8 required>
+                <button type="submit">Add Student</button>
+                <button type="button" id="cancelBtn" class="cancel" onclick="cancelEdit()">Cancel</button>
+            </form>
+        </div>
+
+        <div class="student-card">
+            <div class="heading-row">
+                <h2>Student</h2>
+                <button onclick="loadStudents()">Refresh</button>
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Department</th>
+                        <th>Semester</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="studentTableBody">
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

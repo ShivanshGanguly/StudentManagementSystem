@@ -1,0 +1,400 @@
+/* =========================
+   Global Styles
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+    background:
+        radial-gradient(circle at top left, #e0e7ff 0%, transparent 35%),
+        radial-gradient(circle at bottom right, #cffafe 0%, transparent 35%),
+        #f8fafc;
+    color: #1e293b;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+
+/* Main Container */
+body > div {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =========================
+   Header
+========================= */
+
+h1 {
+    font-size: 36px;
+    font-weight: 750;
+    letter-spacing: -1px;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+
+/* =========================
+   Cards
+========================= */
+
+.form-card,
+.student-card {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+
+    border: 1px solid rgba(226, 232, 240, 0.9);
+    border-radius: 18px;
+
+    box-shadow:
+        0 10px 30px rgba(15, 23, 42, 0.06),
+        0 2px 8px rgba(15, 23, 42, 0.03);
+
+    padding: 26px;
+    margin-bottom: 28px;
+}
+
+.form-card h2,
+.student-card h2 {
+    font-size: 20px;
+    color: #0f172a;
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   Form
+========================= */
+
+form {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr auto auto;
+    gap: 12px;
+    align-items: center;
+}
+
+input {
+    width: 100%;
+    padding: 13px 15px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #0f172a;
+
+    font-size: 14px;
+    outline: none;
+
+    transition: all 0.2s ease;
+}
+
+input::placeholder {
+    color: #94a3b8;
+}
+
+input:hover {
+    border-color: #94a3b8;
+}
+
+input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================
+   Buttons
+========================= */
+
+button {
+    border: none;
+    border-radius: 10px;
+
+    padding: 12px 17px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+/* Add Student Button */
+
+form button[type="submit"] {
+    background: linear-gradient(135deg, #4f46e5, #6366f1);
+    color: white;
+
+    box-shadow: 0 5px 12px rgba(79, 70, 229, 0.25);
+}
+
+form button[type="submit"]:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 18px rgba(79, 70, 229, 0.3);
+}
+
+
+/* Cancel Button */
+
+.cancel {
+    background: #f1f5f9;
+    color: #475569;
+}
+
+.cancel:hover {
+    background: #e2e8f0;
+}
+
+
+/* =========================
+   Student Header
+========================= */
+
+.heading-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 18px;
+}
+
+.heading-row h2 {
+    margin-bottom: 0;
+}
+
+.heading-row button {
+    background: #eef2ff;
+    color: #4f46e5;
+
+    padding: 9px 15px;
+}
+
+.heading-row button:hover {
+    background: #e0e7ff;
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Table
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+
+    overflow: hidden;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+
+/* Table Header */
+
+thead {
+    background: #f8fafc;
+}
+
+th {
+    text-align: left;
+
+    padding: 14px 16px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+
+    color: #64748b;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+
+/* Table Body */
+
+td {
+    padding: 15px 16px;
+
+    font-size: 14px;
+    color: #334155;
+
+    border-bottom: 1px solid #f1f5f9;
+}
+
+tbody tr {
+    background: white;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+tbody tr:hover {
+    background: #f8fafc;
+}
+
+
+/* Remove border from last row */
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================
+   ID Column
+========================= */
+
+td:first-child {
+    font-weight: 700;
+    color: #6366f1;
+}
+
+
+/* =========================
+   Action Buttons
+========================= */
+
+/*
+    Your JavaScript can generate buttons
+    like:
+
+    <button class="update-btn">Update</button>
+    <button class="delete-btn">Delete</button>
+*/
+
+td:last-child {
+    white-space: nowrap;
+}
+
+.update-btn,
+.delete-btn {
+    padding: 8px 12px;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    border-radius: 8px;
+
+    margin-right: 6px;
+}
+
+
+/* Update */
+
+.update-btn {
+    background: #eff6ff;
+    color: #2563eb;
+}
+
+.update-btn:hover {
+    background: #dbeafe;
+    color: #1d4ed8;
+
+    transform: translateY(-1px);
+}
+
+
+/* Delete */
+
+.delete-btn {
+    background: #fef2f2;
+    color: #dc2626;
+}
+
+.delete-btn:hover {
+    background: #fee2e2;
+    color: #b91c1c;
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================
+   Empty Table State
+========================= */
+
+#studentTableBody:empty::after {
+    content: "No students found";
+    display: table-row;
+}
+
+
+/* =========================
+   Responsive Design
+========================= */
+
+@media (max-width: 900px) {
+
+    form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    form button {
+        width: 100%;
+    }
+
+}
+
+@media (max-width: 650px) {
+
+    body {
+        padding: 25px 12px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .form-card,
+    .student-card {
+        padding: 18px;
+        border-radius: 14px;
+    }
+
+    form {
+        grid-template-columns: 1fr;
+    }
+
+    .heading-row {
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    /*
+       Allow the table to scroll horizontally
+       on small screens.
+    */
+
+    .student-card {
+        overflow-x: auto;
+    }
+
+    table {
+        min-width: 650px;
+    }
+}
